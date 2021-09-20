@@ -155,7 +155,7 @@ def show_post(post_id):
             db.session.commit()
         else:
             flash("You need to log in to leave a comment")
-            return redirect("login")
+            return redirect(url_for("login"))
     return render_template("post.html",
                            post=requested_post,
                            form=form,
